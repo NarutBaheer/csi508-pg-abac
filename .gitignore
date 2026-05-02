@@ -1,0 +1,7 @@
+*.o
+*.so
+*.dylib
+*.bc
+*.a
+*.pc
+.DS_Store

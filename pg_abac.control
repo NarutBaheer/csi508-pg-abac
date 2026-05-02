@@ -1,0 +1,22 @@
+# pg_abac.control
+#
+# PostgreSQL reads this file when CREATE EXTENSION pg_abac is run.
+# It tells PostgreSQL the version, where to find the SQL install script,
+# and whether the extension can be installed into any schema.
+
+# Human-readable description (shows up in \dx in psql)
+comment = 'Attribute-Based Access Control policy engine for PostgreSQL'
+
+# The version string. Must match the suffix of your SQL file:
+# sql/pg_abac--1.0.sql  ←  default_version = '1.0'
+default_version = '1.0'
+
+# The name of the compiled shared library, without the path or extension.
+# '$libdir' is replaced by PostgreSQL with its own library directory
+# (find it with:  pg_config --pkglibdir)
+module_pathname = '$libdir/pg_abac'
+
+# relocatable = true  means the extension can be installed into any schema
+# with CREATE EXTENSION pg_abac SCHEMA myschema.
+# relocatable = false means the SQL script controls the schema placement.
+relocatable = true
